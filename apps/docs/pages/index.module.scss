@@ -1,0 +1,6 @@
+@use "@jake/colors";
+@use "sass:map";
+
+.success {
+  color: map-get(colors.$success, sub);
+}

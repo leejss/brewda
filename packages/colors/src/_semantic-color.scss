@@ -1,0 +1,99 @@
+@use "basic-color" as *;
+@use "sass:map";
+
+// Partials
+
+// State Color
+// $success-main: $primary400;
+// $success-sub: $primary50;
+
+// or using map
+// how to use: map-get($success, main)
+$success: (
+  main: $primary400,
+  sub: $primary50,
+);
+
+// $warning-main: $alert600;
+// $warning-sub: $alert50;
+
+$warning: (
+  main: $alert600,
+  sub: $alert50,
+);
+
+// $informative-main: $point600;
+// $informative-sub: $point50;
+
+$informative: (
+  main: $point600,
+  sub: $point50,
+);
+
+// System Color
+// $background-primary: $white;
+// $background-secondary: $gray50;
+
+$background: (
+  primary: $white,
+  secondary: $gray50,
+);
+
+// $divider-section: $gray200;
+// $divider-item: $gray50;
+
+$divider: (
+  section: $gray200,
+  item: $gray50,
+);
+
+$modal: rgba($black, 0.4);
+$skeleton: $gray200;
+
+// Interactive Color
+// $enabled-primary: $primary400;
+// $enabled-secondary: $white;
+// $enabled-tertiary: $point600;
+
+$enabled: (
+  primary: $primary400,
+  secondary: $white,
+  tertiary: $point600,
+);
+
+// $pressed-primary: $primary800;
+// $pressed-secondary: $gray200;
+// $pressed-tertiary: $point900;
+
+$pressed: (
+  primary: $primary800,
+  secondary: $gray200,
+  tertiary: $point900,
+);
+
+$disabled: $gray400;
+
+// Text Color
+// $text-primary: $gray900;
+// $text-secondary: $gray700;
+// $text-tertiary: $gray600;
+// $text-disabled: $gray400;
+
+$text: (
+  primary: $gray900,
+  secondary: $gray700,
+  tertiary: $gray600,
+  disabled: $gray400,
+);
+
+// $button-text-primary: $white;
+// $button-text-secondary: $gray900;
+// $button-text-tertiary: $white;
+// $button-text-disabled: $gray50;
+
+$button-text: (
+  primary: $white,
+  secondary: $gray900,
+  tertiary: $white,
+  disabled: $gray400,
+);
