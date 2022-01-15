@@ -1,14 +1,16 @@
 {
-  "name": "ui",
-  "version": "0.0.0",
+  "name": "@jake/brewda",
+  "version": "0.0.1",
   "main": "./index.tsx",
   "types": "./index.tsx",
   "license": "MIT",
   "devDependencies": {
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
-    "tsconfig": "*",
+    "@types/styled-components": "^5.1.20",
+    "styled-components": "^5.3.3",
     "config": "*",
+    "tsconfig": "*",
     "@jake/colors": "*",
     "typescript": "^4.5.3"
   }
