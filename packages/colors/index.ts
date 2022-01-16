@@ -1,2 +1,2 @@
-export * from "./src/ts/semanticColor";
-// export * from "./src/ts/basicColor";
+export * as semanticColor from "./src/ts/semanticColor";
+export * as basicColor from "./src/ts/basicColor";
