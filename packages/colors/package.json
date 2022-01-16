@@ -1,4 +1,6 @@
 {
   "name": "@jake/colors",
-  "version": "0.0.2"
+  "version": "0.0.2",
+  "types": "./index.ts",
+  "main":"./index.ts"
 }
