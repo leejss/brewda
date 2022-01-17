@@ -20,7 +20,6 @@
     "tsconfig": "*",
     "typescript": "^4.5.3"
   },
-  "dependencies": {},
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"

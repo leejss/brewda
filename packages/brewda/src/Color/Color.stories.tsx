@@ -2,6 +2,7 @@ import { ComponentMeta } from "@storybook/react";
 import ColorInfo from "./Color";
 import { basicColor, semanticColor } from "@jake/colors";
 import "./color.css";
+import { disabled, skeleton } from "@jake/colors/src/ts/semanticColor";
 
 const { alertColor, black, grayColor, pointColor, priamryColor, white } =
   basicColor;
@@ -87,116 +88,196 @@ const {
 export const SemanticColors = () => {
   return (
     <div className="colorStory vertical">
-      <div className="colorInfoContainer bordered">
-        <h1>Success</h1>
-        <ColorInfo hex={success.main} hexName="Primary400" name="SuccessMain" />
-        <ColorInfo hex={success.sub} hexName="Primary50" name="SuccessMain" />
+      <div className="semantic">
+        <h1>State Color</h1>
+        <p>정보를 안내하는 요소에 사용되는 컬러입니다.</p>
+        <div className="colorInfoContainer bordered">
+          <h2>Success</h2>
+          <p>성공에 사용되는 컬러입니다.</p>
+          <ColorInfo
+            hex={success.main}
+            hexName="Primary400"
+            name="SuccessMain"
+          />
+          <ColorInfo hex={success.sub} hexName="Primary50" name="SuccessMain" />
+        </div>
+        <div className="colorInfoContainer bordered">
+          <h2>Informative</h2>
+          <p>알림에 사용되는 컬러입니다. Pending 등의 상황에 사용합니다.</p>
+          <ColorInfo
+            hex={informative.main}
+            hexName="Point600"
+            name="InformativeMain"
+          />
+          <ColorInfo
+            hex={informative.sub}
+            hexName="Point50"
+            name="InformativeMain"
+          />
+        </div>
+        <div className="colorInfoContainer bordered">
+          <h2>Warning</h2>
+          <p>경고, 실패에 사용되는 컬러입니다.</p>
+          <ColorInfo hex={warning.main} hexName="Alert600" name="WarningMain" />
+          <ColorInfo hex={warning.sub} hexName="Alert50" name="WarningMain" />
+        </div>
       </div>
-      <div className="colorInfoContainer bordered">
-        <h1>Informative</h1>
-        <ColorInfo
-          hex={informative.main}
-          hexName="Point600"
-          name="InformativeMain"
-        />
-        <ColorInfo
-          hex={informative.sub}
-          hexName="Point50"
-          name="InformativeMain"
-        />
+      <div className="semantic">
+        <h1>System Color</h1>
+        <p>화면의 기본적인 구성요소에 사용되는 컬러입니다.</p>
+        <div className="colorInfoContainer bordered">
+          <h2>Divider</h2>
+          <p>
+            영역구분을 위해 사용되는 디바이더에 사용하는 컬러입니다. 용도에 맞게
+            사용합니다.
+          </p>
+          <ColorInfo
+            hex={divider.item}
+            hexName="Gray200"
+            name="DividerSection"
+          />
+          <ColorInfo
+            hex={divider.section}
+            hexName="Gray50"
+            name="DividerItem"
+          />
+        </div>
+        <div className="colorInfoContainer bordered">
+          <h2>Background</h2>
+          <p>화면에 적용하는 배경컬러입니다. 위계에 맞게 사용합니다.</p>
+          <ColorInfo
+            hex={background.primary}
+            hexName="White"
+            name="BackgroundPrimary"
+          />
+          <ColorInfo
+            hex={background.secondary}
+            hexName="Gray50"
+            name="BackgroundSecondary"
+          />
+        </div>
+        <div className="colorInfoContainer bordered">
+          <h2>Modal</h2>
+          <p>
+            Modal을 활용할 때 배경을 Opacity가 있는 Black로 덮을 때 사용되는
+            컬러입니다. 용도에 맞게 사용합니다.
+          </p>
+        </div>
+        <div className="colorInfoContainer bordered">
+          <h2>Skeleton</h2>
+          <p>데이터를 가져오는 동안 콘텐츠를 표시하는 컴포넌트로 사용합니다.</p>
+          <ColorInfo hex={skeleton} hexName="Gray200" name="Skeleton" />
+        </div>
       </div>
-      <div className="colorInfoContainer bordered">
-        <h1>Warning</h1>
-        <ColorInfo hex={warning.main} hexName="Alert600" name="WarningMain" />
-        <ColorInfo hex={warning.sub} hexName="Alert50" name="WarningMain" />
+      <div className="semantic">
+        <h1>Interactive Color</h1>
+        <p>
+          상태 안내를 위해 쓰이는 컬러입니다. 버튼, 컴포넌트 등에 활용됩니다.
+          위계에 맞게 사용됩니다.
+        </p>
+        <p></p>
+        <div className="colorInfoContainer bordered">
+          <h2>Enabled</h2>
+          <p>활성 상태일 때 사용되는 컬러 입니다. 위계에 맞게 사용합니다.</p>
+          <ColorInfo
+            hex={enabled.primary}
+            hexName="Primary400"
+            name="EnabledPrimary"
+          />
+          <ColorInfo
+            hex={enabled.secondary}
+            hexName="White"
+            name="EnabledSecondary"
+          />
+          <ColorInfo
+            hex={enabled.tertiary}
+            hexName="Point600"
+            name="EnabledSecondary"
+          />
+        </div>
+        <div className="colorInfoContainer bordered">
+          <h2>Pressed</h2>
+          <ColorInfo
+            hex={pressed.primary}
+            hexName="Primary800"
+            name="PressedPrimary"
+          />
+          <ColorInfo
+            hex={pressed.secondary}
+            hexName="Gray200"
+            name="PressedSecondary"
+          />
+          <ColorInfo
+            hex={pressed.tertiary}
+            hexName="Point900"
+            name="PresesdTertiary"
+          />
+        </div>
+        <div className="colorInfoContainer bordered">
+          <h2>Disabled</h2>
+          <p>
+            비활성 상태일 때 사용되는 컬러 입니다. 모든 Basic Color는
+            Gray400으로 통일된 Disabled Color를 갖습니다.
+          </p>
+          <ColorInfo hex={disabled} hexName="Gray400" name="Disabled" />
+        </div>
       </div>
-      <div className="colorInfoContainer bordered">
-        <h1>Divider</h1>
-        <ColorInfo hex={divider.item} hexName="Gray200" name="DividerSection" />
-        <ColorInfo hex={divider.section} hexName="Gray50" name="DividerItem" />
-      </div>
-      <div className="colorInfoContainer bordered">
-        <h1>Background</h1>
-        <ColorInfo
-          hex={background.primary}
-          hexName="White"
-          name="BackgroundPrimary"
-        />
-        <ColorInfo
-          hex={background.secondary}
-          hexName="Gray50"
-          name="BackgroundSecondary"
-        />
-      </div>
-      <div className="colorInfoContainer bordered">
-        <h1>Enabled</h1>
-        <ColorInfo
-          hex={enabled.primary}
-          hexName="Primary400"
-          name="EnabledPrimary"
-        />
-        <ColorInfo
-          hex={enabled.secondary}
-          hexName="White"
-          name="EnabledSecondary"
-        />
-        <ColorInfo
-          hex={enabled.tertiary}
-          hexName="Point600"
-          name="EnabledSecondary"
-        />
-      </div>
-      <div className="colorInfoContainer bordered">
-        <h1>Pressed</h1>
-        <ColorInfo
-          hex={pressed.primary}
-          hexName="Primary800"
-          name="PressedPrimary"
-        />
-        <ColorInfo
-          hex={pressed.secondary}
-          hexName="Gray200"
-          name="PressedSecondary"
-        />
-        <ColorInfo
-          hex={pressed.tertiary}
-          hexName="Point900"
-          name="PresesdTertiary"
-        />
-      </div>
-      <div className="colorInfoContainer bordered">
-        <h1>Text</h1>
-        <ColorInfo hex={text.primary} hexName="Gray900" name="TextPrimary" />
-        <ColorInfo
-          hex={text.secondary}
-          hexName="Gray700"
-          name="TextSecondary"
-        />
-        <ColorInfo hex={text.tertiary} hexName="Gray600" name="TextTertiary" />
-        <ColorInfo hex={text.disabled} hexName="Gray400" name="TextDisabled" />
-      </div>
-      <div className="colorInfoContainer bordered">
-        <h1>Button Text</h1>
-        <ColorInfo
-          hex={buttonText.primary}
-          hexName="White"
-          name="ButtonTextPrimary"
-        />
-        <ColorInfo
-          hex={buttonText.secondary}
-          hexName="Gray400"
-          name="ButtonTextSecondary"
-        />
-        <ColorInfo
-          hex={buttonText.tertiary}
-          hexName="White"
-          name="ButtonTextTertiary"
-        />
-        <ColorInfo
-          hex={buttonText.disabled}
-          hexName="Gray400"
-          name="ButtonTextDisabled"
-        />
+      <div className="semantic">
+        <h1>Text Color</h1>
+        <p>
+          텍스트에 쓰이는 컬러입니다. 사용기준에 따라 Text, Background 두 종류로
+          이루어져 있습니다.
+        </p>
+        <div className="colorInfoContainer bordered">
+          <h2>Text</h2>
+          <p>
+            Background 기준 Text에 쓰이는 컬러를 정의합니다. 위계와 상황에 맞춰
+            컬러를 활용합니다.
+          </p>
+          <ColorInfo hex={text.primary} hexName="Gray900" name="TextPrimary" />
+          <ColorInfo
+            hex={text.secondary}
+            hexName="Gray700"
+            name="TextSecondary"
+          />
+          <ColorInfo
+            hex={text.tertiary}
+            hexName="Gray600"
+            name="TextTertiary"
+          />
+          <ColorInfo
+            hex={text.disabled}
+            hexName="Gray400"
+            name="TextDisabled"
+          />
+        </div>
+        <div className="colorInfoContainer bordered">
+          <h2>Button Text</h2>
+          <p>
+            Button의 Surface color 컬러를 정의합니다. Button에 맞춰 컬러를
+            활용합니다.
+          </p>
+          <ColorInfo
+            hex={buttonText.primary}
+            hexName="White"
+            name="ButtonTextPrimary"
+          />
+          <ColorInfo
+            hex={buttonText.secondary}
+            hexName="Gray400"
+            name="ButtonTextSecondary"
+          />
+          <ColorInfo
+            hex={buttonText.tertiary}
+            hexName="White"
+            name="ButtonTextTertiary"
+          />
+          <ColorInfo
+            hex={buttonText.disabled}
+            hexName="Gray400"
+            name="ButtonTextDisabled"
+          />
+        </div>
       </div>
     </div>
   );

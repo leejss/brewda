@@ -1,1 +1,2 @@
-export * from "./src/Button";
+// Ready to start
+export {};

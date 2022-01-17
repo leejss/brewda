@@ -22,6 +22,7 @@ const ColorInfo: React.FC<ColorInfoProps> = ({
   height = 25,
 }) => {
   const ColorBox = styled.div`
+    border-radius: 5px;
     width: ${typeof width === "number" ? `${width}px` : width};
     height: ${typeof height === "number" ? `${height}px` : height};
     background-color: ${hex};

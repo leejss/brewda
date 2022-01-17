@@ -1,3 +1,13 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 .colorStory {
   display: flex;
   gap: 20px;
@@ -5,6 +15,11 @@
 
 .vertical {
   flex-direction: column;
+}
+
+.semantic {
+  display: grid;
+  gap: 10px;
 }
 
 .colorInfoContainer {
